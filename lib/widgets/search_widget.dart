@@ -176,7 +176,7 @@ class _MySearchBarState extends State<MySearchBar> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Text(
-                      "\$${pet.price}",
+                      "₱${pet.price}",
                       style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13, color: Color(0xFF00796B)),
                     ),
                   ),

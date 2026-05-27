@@ -37,7 +37,7 @@ class StoreContent extends StatelessWidget {
       context: context,
       builder: (context) => AlertDialog(
         title: Text("Modify Price for ${pet.name}"),
-        content: TextField(controller: ctrl, keyboardType: TextInputType.number, decoration: const InputDecoration(prefixText: "\$")),
+        content: TextField(controller: ctrl, keyboardType: TextInputType.number, decoration: const InputDecoration(prefixText: "₱")),
         actions: [
           TextButton(onPressed: () => Navigator.pop(context), child: const Text("Cancel")),
           TextButton(onPressed: () { state.adminModifyProductPrice(pet.id, ctrl.text); Navigator.pop(context); }, child: const Text("Save")),
@@ -116,7 +116,7 @@ class StoreContent extends StatelessWidget {
                             children: [
                               Row(
                                 children: [
-                                  Text("\₱${pet.price}", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: headerPurple)),
+                                  Text("₱${pet.price}", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: headerPurple)),
 
                                   if (storeState.isAdmin) ...[
                                     const SizedBox(width: 4),

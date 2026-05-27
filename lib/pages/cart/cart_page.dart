@@ -208,7 +208,7 @@ class _CartPageState extends State<CartPage> {
                                           Row(
                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Expanded(child: Text("Total: \₱${totalLineCost.toStringAsFixed(2)}", maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: headerPurple))),
+                                              Expanded(child: Text("Total: ₱${totalLineCost.toStringAsFixed(2)}", maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: headerPurple))),
                                               Container(
                                                 decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(20)),
                                                 child: Row(
@@ -252,7 +252,7 @@ class _CartPageState extends State<CartPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text("Cart Summary Total:", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.black54)),
-                        Text("\₱${totalCartSum.toStringAsFixed(2)}", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18, color: headerPurple)),
+                        Text("₱${totalCartSum.toStringAsFixed(2)}", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18, color: headerPurple)),
                       ],
                     ),
                     const SizedBox(height: 12),
@@ -394,7 +394,7 @@ class _CartPageState extends State<CartPage> {
                                           Text("Pet: ${booking.petName} (${booking.petType}) • Mode: ${booking.logisticsMode}", maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, color: Colors.black45, fontWeight: FontWeight.w500)),
                                           Text("Address: ${booking.ownerAddress}", maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 10, color: Colors.black38)),
                                           const SizedBox(height: 6),
-                                          Text("Total Cost: \$${booking.totalPrice.toStringAsFixed(2)}", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 13, color: headerPurple)),
+                                          Text("Total Cost: ₱${booking.totalPrice.toStringAsFixed(2)}", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 13, color: headerPurple)),
                                         ],
                                       ),
                                     )
@@ -426,7 +426,7 @@ class _CartPageState extends State<CartPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text("Service Summary Total:", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.black54)),
-                        Text("\$${totalServicesSum.toStringAsFixed(2)}", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18, color: headerPurple)),
+                        Text("₱${totalServicesSum.toStringAsFixed(2)}", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18, color: headerPurple)),
                       ],
                     ),
                     const SizedBox(height: 12),

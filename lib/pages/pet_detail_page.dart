@@ -246,7 +246,7 @@ class _PetDetailPageState extends State<PetDetailPage> {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Text(
-                            "\$${widget.pet.price}  |  Add to Cart",
+                            "₱${widget.pet.price}  |  Add to Cart",
                             style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
                           ),
                         ),

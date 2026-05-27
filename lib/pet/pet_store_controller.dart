@@ -212,11 +212,11 @@ class PetStoreController extends ChangeNotifier {
 
   final List<Map<String, dynamic>> _promoItems = [
     {"title": "20% OFF", "subtitle": "All Bird Supplies", "icon": Icons.flutter_dash_rounded, "gradient": [const Color(0xFFFF9100), const Color(0xFFFF3D00)]},
-    {"title": "\$50 OFF", "subtitle": "Grooming Packages", "icon": Icons.content_cut_rounded, "gradient": [Color(0xFFB388FF), Color(0xFF6200EA)]},
+    {"title": "₱50 OFF", "subtitle": "Grooming Packages", "icon": Icons.content_cut_rounded, "gradient": [Color(0xFFB388FF), Color(0xFF6200EA)]},
     {"title": "FREE TOY", "subtitle": "Spend 100 Treats Pts", "icon": Icons.card_giftcard_rounded, "gradient": [const Color(0xFF26A69A), const Color(0xFF00695C)]},
     {"title": "BOGO DEAL", "subtitle": "Premium Cat Treats", "icon": Icons.pets_rounded, "gradient": [const Color(0xFFEC407A), const Color(0xFFB71C1C)]},
     {"title": "15% SAVINGS", "subtitle": "First Veterinary Check", "icon": Icons.medical_services_rounded, "gradient": [const Color(0xFF42A5F5), const Color(0xFF0D47A1)]},
-    {"title": "\$10 GIFT", "subtitle": "Shampoo Products", "icon": Icons.bubble_chart_rounded, "gradient": [const Color(0xFF66BB6A), const Color(0xFF1B5E20)]},
+    {"title": "₱10 GIFT", "subtitle": "Shampoo Products", "icon": Icons.bubble_chart_rounded, "gradient": [const Color(0xFF66BB6A), const Color(0xFF1B5E20)]},
     {"title": "3x REWARDS", "subtitle": "Spa Day Sessions", "icon": Icons.star_rounded, "gradient": [const Color(0xFFAB47BC), const Color(0xFF4A148C)]},
   ];
   List<Map<String, dynamic>> get promoItems => _promoItems;

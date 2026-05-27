@@ -376,7 +376,7 @@ class PendingPaymentsPage extends StatelessWidget {
                           ),
                           const SizedBox(height: 2),
                           Text(
-                            "\$${txn.totalPrice.toStringAsFixed(2)}",
+                            "₱${txn.totalPrice.toStringAsFixed(2)}",
                             style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Color(0xFF1A0533), letterSpacing: -0.5),
                           ),
                         ],

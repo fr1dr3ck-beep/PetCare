@@ -22,7 +22,7 @@ class _ServicesContentState extends State<ServicesContent> {
       context: context,
       builder: (context) => AlertDialog(
         title: Text("Modify Price for ${service.title}"),
-        content: TextField(controller: ctrl, keyboardType: TextInputType.number, decoration: const InputDecoration(prefixText: "\$")),
+        content: TextField(controller: ctrl, keyboardType: TextInputType.number, decoration: const InputDecoration(prefixText: "₱")),
         actions: [
           TextButton(onPressed: () => Navigator.pop(context), child: const Text("Cancel")),
           TextButton(onPressed: () {
@@ -215,7 +215,7 @@ class _ServicesContentState extends State<ServicesContent> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(s.title, maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: isSelected ? Colors.white : Colors.black87)),
-                                      Text("\₱${s.price.toStringAsFixed(2)}", style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: isSelected ? Colors.white70 : Colors.black45)),
+                                      Text("₱${s.price.toStringAsFixed(2)}", style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: isSelected ? Colors.white70 : Colors.black45)),
                                     ],
                                   ),
                                 ),
@@ -251,7 +251,7 @@ class _ServicesContentState extends State<ServicesContent> {
                             Icon(Icons.info_outline_rounded, color: headerPurple, size: 18),
                             const SizedBox(width: 8),
                             Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                              Text("${s.title} (\₱${s.price.toStringAsFixed(2)})", style: TextStyle(fontWeight: FontWeight.bold, color: deepPurpleGlow, fontSize: 13)),
+                              Text("${s.title} (₱${s.price.toStringAsFixed(2)})", style: TextStyle(fontWeight: FontWeight.bold, color: deepPurpleGlow, fontSize: 13)),
                               const SizedBox(height: 2),
                               Text(s.description, style: const TextStyle(fontSize: 11, color: Colors.black54, height: 1.3)),
                             ])),
@@ -280,7 +280,7 @@ class _ServicesContentState extends State<ServicesContent> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text("Estimated Total:", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.black54)),
-                        Text("\₱${totalEstimate.toStringAsFixed(2)}", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18, color: deepPurpleGlow)),
+                        Text("₱${totalEstimate.toStringAsFixed(2)}", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18, color: deepPurpleGlow)),
                       ],
                     ),
                     const SizedBox(height: 16),
