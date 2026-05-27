@@ -30880,7 +30880,7 @@ r=t.H7
 q=t.t_
 p=t.N
 o=t.z
-r=new A.fB(k,A.b([new A.dI(1,"Golden Retriever Puppy","450.00",n,"Friendly and highly intelligent family companion."),new A.dI(2,"French Bulldog","600.00",n,"Adaptable, quiet, and muscular compact house pet."),new A.dI(3,"German Shepherd","500.00",n,"Confident, guardian, and highly capable working breed."),new A.dI(4,"Pomeranian Husky Mix","550.00",n,"Energetic, fiercely loyal, and visually striking mini companion."),new A.dI(5,"Labrador Retriever","400.00",n,"Active, outgoing, and gentle companion dog."),new A.dI(6,"Siamese Kitten","300.00",m,"Playful, vocal, and deeply devoted social house pet."),new A.dI(7,"Persian Cat","350.00",m,"Quiet, gentle, and majestic long-haired indoor feline."),new A.dI(8,"Maine Coon","480.00",m,"Massive, friendly, intelligent giant with a lush coat."),new A.dI(9,"Ragdoll Kitten","420.00",m,"Docile, affectionate, and famously relaxed lap-cat."),new A.dI(10,"British Shorthair","380.00",m,"Calm, easygoing, and recognizable chubby-cheeked feline."),new A.dI(11,"Budgerigar (Parakeet)","45.00",l,"Cheerful, compact, and easy-to-train vocal companion bird."),new A.dI(12,"Cockatiel Parrot","120.00",l,"Affectionate crest-waving whistler that loves human interaction."),new A.dI(13,"African Grey","950.00",l,"Unmatched speech mimicry intelligence and deep analytical mind."),new A.dI(14,"Green-Cheeked Conure","250.00",l,"Playful, curious, and compact trick-loving colorful parrot."),new A.dI(15,"Zebra Finch Trio","60.00",l,"Active, social, musical, and entertaining companion flock birds.")],t.ha),A.b([B.ZG,B.ZF,B.ZE,B.ZD],t.JI),A.v(s,s),A.v(s,t.g7),A.v(s,t.uq),A.v(s,s),A.b([],t.X_),A.b([],r),A.b([],t.If),A.b([],t.Sf),A.b([A.S(["title","20% OFF","subtitle","All Bird Supplies","icon",B.ng,"gradient",A.b([B.lE,B.lD],q)],p,o),A.S(["title","$50 OFF","subtitle","Grooming Packages","icon",B.hn,"gradient",A.b([A.bl(4289956095),A.bl(4284612842)],q)],p,o),A.S(["title","FREE TOY","subtitle","Spend 100 Treats Pts","icon",B.nd,"gradient",A.b([B.lG,B.lW],q)],p,o),A.S(["title","BOGO DEAL","subtitle","Premium Cat Treats","icon",B.d8,"gradient",A.b([B.lY,B.iK],q)],p,o),A.S(["title","15% SAVINGS","subtitle","First Veterinary Check","icon",B.nj,"gradient",A.b([B.iE,B.iG],q)],p,o),A.S(["title","$10 GIFT","subtitle","Shampoo Products","icon",B.nc,"gradient",A.b([B.iH,B.iB],q)],p,o),A.S(["title","3x REWARDS","subtitle","Spa Day Sessions","icon",B.dD,"gradient",A.b([B.iL,B.h2],q)],p,o)],r),A.b([A.S(["title","Grooming","icon",B.NS],p,o),A.S(["title","Pet Hotel","icon",B.NV],p,o),A.S(["title","Training","icon",B.O_],p,o),A.S(["title","Telehealth","icon",B.NX],p,o),A.S(["title","Diet Plan","icon",B.O0],p,o),A.S(["title","Vaccine","icon",B.OB],p,o),A.S(["title","Insurance","icon",B.O1],p,o),A.S(["title","Adoption","icon",B.O4],p,o)],r),$.ab())
+r=new A.fB(k,A.b([new A.dI(1,"Golden Retriever Puppy","450.00",n,"Friendly and highly intelligent family companion."),new A.dI(2,"French Bulldog","600.00",n,"Adaptable, quiet, and muscular compact house pet."),new A.dI(3,"German Shepherd","500.00",n,"Confident, guardian, and highly capable working breed."),new A.dI(4,"Pomeranian Husky Mix","550.00",n,"Energetic, fiercely loyal, and visually striking mini companion."),new A.dI(5,"Labrador Retriever","400.00",n,"Active, outgoing, and gentle companion dog."),new A.dI(6,"Siamese Kitten","300.00",m,"Playful, vocal, and deeply devoted social house pet."),new A.dI(7,"Persian Cat","350.00",m,"Quiet, gentle, and majestic long-haired indoor feline."),new A.dI(8,"Maine Coon","480.00",m,"Massive, friendly, intelligent giant with a lush coat."),new A.dI(9,"Ragdoll Kitten","420.00",m,"Docile, affectionate, and famously relaxed lap-cat."),new A.dI(10,"British Shorthair","380.00",m,"Calm, easygoing, and recognizable chubby-cheeked feline."),new A.dI(11,"Budgerigar (Parakeet)","45.00",l,"Cheerful, compact, and easy-to-train vocal companion bird."),new A.dI(12,"Cockatiel Parrot","120.00",l,"Affectionate crest-waving whistler that loves human interaction."),new A.dI(13,"African Grey","950.00",l,"Unmatched speech mimicry intelligence and deep analytical mind."),new A.dI(14,"Green-Cheeked Conure","250.00",l,"Playful, curious, and compact trick-loving colorful parrot."),new A.dI(15,"Zebra Finch Trio","60.00",l,"Active, social, musical, and entertaining companion flock birds.")],t.ha),A.b([B.ZG,B.ZF,B.ZE,B.ZD],t.JI),A.v(s,s),A.v(s,t.g7),A.v(s,t.uq),A.v(s,s),A.b([],t.X_),A.b([],r),A.b([],t.If),A.b([],t.Sf),A.b([A.S(["title","20% OFF","subtitle","All Bird Supplies","icon",B.ng,"gradient",A.b([B.lE,B.lD],q)],p,o),A.S(["title","\u20b150 OFF","subtitle","Grooming Packages","icon",B.hn,"gradient",A.b([A.bl(4289956095),A.bl(4284612842)],q)],p,o),A.S(["title","FREE TOY","subtitle","Spend 100 Treats Pts","icon",B.nd,"gradient",A.b([B.lG,B.lW],q)],p,o),A.S(["title","BOGO DEAL","subtitle","Premium Cat Treats","icon",B.d8,"gradient",A.b([B.lY,B.iK],q)],p,o),A.S(["title","15% SAVINGS","subtitle","First Veterinary Check","icon",B.nj,"gradient",A.b([B.iE,B.iG],q)],p,o),A.S(["title","\u20b110 GIFT","subtitle","Shampoo Products","icon",B.nc,"gradient",A.b([B.iH,B.iB],q)],p,o),A.S(["title","3x REWARDS","subtitle","Spa Day Sessions","icon",B.dD,"gradient",A.b([B.iL,B.h2],q)],p,o)],r),A.b([A.S(["title","Grooming","icon",B.NS],p,o),A.S(["title","Pet Hotel","icon",B.NV],p,o),A.S(["title","Training","icon",B.O_],p,o),A.S(["title","Telehealth","icon",B.NX],p,o),A.S(["title","Diet Plan","icon",B.O0],p,o),A.S(["title","Vaccine","icon",B.OB],p,o),A.S(["title","Insurance","icon",B.O1],p,o),A.S(["title","Adoption","icon",B.O4],p,o)],r),$.ab())
 r.abF()
 return r},
 h0:function h0(a,b,c,d,e,f,g,h,i,j){var _=this
@@ -102542,7 +102542,7 @@ g=A.ai(l,A.b5(A.b([r.zY(m,new A.avG(r,b,m)),B.eA,B.a0i],s),B.p,B.n,B.m,0,l),B.i,
 j=A.Y(new A.aV(j,i),h)
 i=this.b
 j=A.cv(A.hz(l,new A.avH(r,b,i),j.length,B.j7,l,B.U,!1),1)
-i=A.b5(A.b([B.a7n,A.al("$"+B.d.ad(o,2),l,l,l,l,A.c3(l,l,i,l,l,l,l,l,l,l,l,18,l,l,B.bf,l,l,!0,l,l,l,l,l,l,l,l),l,l)],s),B.p,B.al,B.m,0,l)
+i=A.b5(A.b([B.a7n,A.al("\u20b1"+B.d.ad(o,2),l,l,l,l,A.c3(l,l,i,l,l,l,l,l,l,l,l,18,l,l,B.bf,l,l,!0,l,l,l,l,l,l,l,l),l,l)],s),B.p,B.al,B.m,0,l)
 h=k.a>0?B.eX:B.cE
 return A.b0(A.b([g,j,A.ai(l,A.l9(!0,A.b0(A.b([i,B.cu,A.br(l,A.ai(l,B.qC,B.i,l,l,new A.ah(h,l,l,A.ak(14),l,l,B.t),l,l,l,B.c4,l,l,1/0),B.r,!1,l,l,l,l,l,l,l,l,l,l,l,l,l,l,new A.avI(k,r,a),l,l,l,l,l,l)],s),B.p,B.n,B.a0),B.O,!1),B.i,l,l,B.q4,l,l,l,B.c5,l,l,l)],s),B.p,B.n,B.m)},
 $S:198}
@@ -102577,7 +102577,7 @@ j=A.aPx(A.b([A.aTk(B.m_,B.f,B.tz,"Delete",new A.avD(i,j,s))],o),0.25,B.rJ)
 n=A.ak(15)
 m=s.b
 l=this.c
-return new A.ay(B.hh,A.b5(A.b([r,B.ct,A.cv(A.iM(p,A.aTj(A.ai(k,A.b5(A.b([A.ai(k,A.cj(i.aho(m),l,k,26),B.i,k,k,new A.ah(B.bz,k,k,n,k,k,B.t),k,60,k,k,k,k,60),B.eA,A.cv(A.b0(A.b([A.al(m,1,B.Y,k,k,B.a2_,k,k),B.cv,A.al("Pet: "+s.f+" ("+s.e+") \u2022 Mode: "+s.d,1,B.Y,k,k,B.a3B,k,k),A.al("Address: "+s.w,1,B.Y,k,k,B.a5i,k,k),B.ap,A.al("Total Cost: $"+B.d.ad(s.c,2),k,k,k,k,A.c3(k,k,l,k,k,k,k,k,k,k,k,13,k,k,B.bf,k,k,!0,k,k,k,k,k,k,k,k),k,k)],o),B.I,B.n,B.m),1)],o),B.I,B.n,B.m,0,k),B.i,B.f,k,k,k,k,k,B.dA,k,k,k),j,new A.dt("service_"+h,t.kK)),B.aJ),1)],o),B.p,B.n,B.m,0,k),k)},
+return new A.ay(B.hh,A.b5(A.b([r,B.ct,A.cv(A.iM(p,A.aTj(A.ai(k,A.b5(A.b([A.ai(k,A.cj(i.aho(m),l,k,26),B.i,k,k,new A.ah(B.bz,k,k,n,k,k,B.t),k,60,k,k,k,k,60),B.eA,A.cv(A.b0(A.b([A.al(m,1,B.Y,k,k,B.a2_,k,k),B.cv,A.al("Pet: "+s.f+" ("+s.e+") \u2022 Mode: "+s.d,1,B.Y,k,k,B.a3B,k,k),A.al("Address: "+s.w,1,B.Y,k,k,B.a5i,k,k),B.ap,A.al("Total Cost: \u20b1"+B.d.ad(s.c,2),k,k,k,k,A.c3(k,k,l,k,k,k,k,k,k,k,k,13,k,k,B.bf,k,k,!0,k,k,k,k,k,k,k,k),k,k)],o),B.I,B.n,B.m),1)],o),B.I,B.n,B.m,0,k),B.i,B.f,k,k,k,k,k,B.dA,k,k,k),j,new A.dt("service_"+h,t.kK)),B.aJ),1)],o),B.p,B.n,B.m,0,k),k)},
 $S:101}
 A.avC.prototype={
 $0(){var s=this.a
@@ -103117,7 +103117,7 @@ B.b.P(f,r)
 B.b.P(s,f)}B.b.P(a1,s)}a1.push(B.aS)
 a1.push(A.ai(i,i,B.i,B.r4,i,i,i,1,i,i,i,i,i))
 a1.push(B.aS)
-f=A.b0(A.b([A.al("TOTAL AMOUNT",i,i,i,i,A.c3(i,i,A.ae(102,B.ao.q()>>>16&255,B.ao.q()>>>8&255,B.ao.q()&255),i,i,i,i,i,i,i,i,9,i,i,B.ed,i,i,!0,i,1,i,i,i,i,i,i),i,i),B.cv,A.al("$"+B.d.ad(h.d,2),i,i,i,i,B.Fj,i,i)],a0),B.I,B.n,B.m)
+f=A.b0(A.b([A.al("TOTAL AMOUNT",i,i,i,i,A.c3(i,i,A.ae(102,B.ao.q()>>>16&255,B.ao.q()>>>8&255,B.ao.q()&255),i,i,i,i,i,i,i,i,9,i,i,B.ed,i,i,!0,i,1,i,i,i,i,i,i),i,i),B.cv,A.al("\u20b1"+B.d.ad(h.d,2),i,i,i,i,B.Fj,i,i)],a0),B.I,B.n,B.m)
 s=A.b([],a0)
 if(!a2.Q){r=h.Q
 r=r!=="N/A"&&r!=="Counter COD"}else r=!1
@@ -103195,7 +103195,7 @@ r=A.ak(20)
 r=A.ai(m,A.b5(A.b([A.br(m,B.Pt,B.r,!1,m,m,m,m,m,m,m,m,m,m,m,m,m,m,new A.aC0(l,b),m,m,m,m,m,m),new A.ay(B.ea,A.al(""+k,m,m,m,m,B.dP,m,m),m),A.br(m,B.PB,B.r,!1,m,m,m,m,m,m,m,m,m,m,m,m,m,m,new A.aC1(l,b),m,m,m,m,m,m)],h),B.p,B.n,B.m,0,m),B.i,m,m,new A.ah(B.f,m,m,r,m,m,B.t),m,m,m,B.rT,m,m,m)
 q=k>0?B.ac:B.cE
 p=A.ak(20)
-return A.ec(B.ba,A.b([i,g,f,A.oN(0,A.ai(m,A.b5(A.b([r,A.br(m,A.ai(m,A.al("$"+l.a.c.c+"  |  Add to Cart",m,m,m,m,B.Fy,m,m),B.i,m,m,new A.ah(q,m,m,p,m,m,B.t),m,m,m,B.Nb,m,m,m),B.r,!1,m,m,m,m,m,m,m,m,m,m,m,m,m,m,new A.aC2(l,k,b,a),m,m,m,m,m,m)],h),B.p,B.al,B.m,0,m),B.i,m,m,new A.ah(B.h8,m,m,B.im,m,m,B.t),m,m,m,B.dB,m,m,m),m,m,0,0,m,m)],h),B.u,B.aN,m)},
+return A.ec(B.ba,A.b([i,g,f,A.oN(0,A.ai(m,A.b5(A.b([r,A.br(m,A.ai(m,A.al("\u20b1"+l.a.c.c+"  |  Add to Cart",m,m,m,m,B.Fy,m,m),B.i,m,m,new A.ah(q,m,m,p,m,m,B.t),m,m,m,B.Nb,m,m,m),B.r,!1,m,m,m,m,m,m,m,m,m,m,m,m,m,m,new A.aC2(l,k,b,a),m,m,m,m,m,m)],h),B.p,B.al,B.m,0,m),B.i,m,m,new A.ah(B.h8,m,m,B.im,m,m,B.t),m,m,m,B.dB,m,m,m),m,m,0,0,m,m)],h),B.u,B.aN,m)},
 $S:674}
 A.aBY.prototype={
 $0(){A.bm(this.a,!1).ca(null)
@@ -105219,7 +105219,7 @@ r=A.ae(15,B.bd.q()>>>16&255,B.bd.q()>>>8&255,B.bd.q()&255)
 q=A.ak(8)
 q=A.b5(A.b([A.ai(p,A.al(a.d.toUpperCase(),p,p,p,p,B.a2u,p,p),B.i,p,p,new A.ah(r,p,p,q,p,p,B.t),p,p,p,B.Nk,p,p,p)],t.p),B.p,B.n,B.m,0,p)
 r=A.ak(10)
-return new A.ay(B.MV,A.ai(p,A.ih(B.MN,p,j,new A.aBn(this.a,a,this.c),new A.bs(k,B.k),new A.ay(B.MI,q,p),s,A.ai(p,A.al("$"+a.c,p,p,p,p,B.a6E,p,p),B.i,p,p,new A.ah(B.lF,p,p,r,p,p,B.t),p,p,p,B.ML,p,p,p)),B.i,p,p,new A.ah(B.f,p,m,n,l,p,B.t),p,p,p,p,p,p,p),p)},
+return new A.ay(B.MV,A.ai(p,A.ih(B.MN,p,j,new A.aBn(this.a,a,this.c),new A.bs(k,B.k),new A.ay(B.MI,q,p),s,A.ai(p,A.al("\u20b1"+a.c,p,p,p,p,B.a6E,p,p),B.i,p,p,new A.ah(B.lF,p,p,r,p,p,B.t),p,p,p,B.ML,p,p,p)),B.i,p,p,new A.ah(B.f,p,m,n,l,p,B.t),p,p,p,p,p,p,p),p)},
 $S:703}
 A.aBm.prototype={
 $3(a,b,c){return B.Pp},
@@ -110171,13 +110171,13 @@ B.b1=s([],t.oU)
 B.PY=new A.mg("\ufffc",null,null,null,!0,!0,B.b1)
 B.PZ=new A.wi(null,null,null,null,null,null,null,null,null,B.mZ,B.ls,!1,null,!1,null,null,null,null,null,null,null,null,!1,null,null,null,null,null,null,null,null,null,null,null,!1,null,null)
 B.Q_=new A.jO(null,null,null,null,null,null,null,null,null,null,"name@example.com",null,B.i3,null,null,null,!0,!0,!1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,B.dy,null,null,null,null,null,null,null,B.nW,!0,null,null,null,null)
-B.tP=new A.jO(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,!0,!1,null,null,null,null,null,null,null,null,null,null,null,null,"$",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null,null)
 B.acQ=new A.jO(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,!0,!1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null,null)
 B.a2g=new A.k(!0,null,null,null,null,null,13,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.WV=new A.eq(4,B.fR,B.dZ)
 B.Q1=new A.jO(null,null,null,null,null,null,null,null,null,null,"Type custom explanation alert text here...",null,B.a2g,null,null,null,!0,!0,!1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,B.WV,!0,null,null,null,null)
 B.WW=new A.eq(4,B.fS,B.dZ)
 B.Q2=new A.jO(null,null,null,"Input custom status message",null,null,null,null,null,null,"e.g., Grooming Finished / In Suite 4",null,null,null,null,null,!0,!0,!1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,B.WW,!0,null,null,null,null)
+B.tP=new A.jO(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,!0,!1,null,null,null,null,null,null,null,null,null,null,null,null,"\u20b1",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null,null)
 B.Q3=new A.jO(null,null,null,null,null,null,null,null,null,null,"Type your recommendations or feedback here...",null,B.i3,null,null,null,!0,!0,!1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,B.dy,null,null,null,null,null,null,null,B.nW,!0,null,null,null,null)
 B.Q5=new A.cR(0,0.16666666666666666,B.F)
 B.Q6=new A.cR(0.25,0.5,B.F)
