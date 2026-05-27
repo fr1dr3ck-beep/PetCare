@@ -364,7 +364,12 @@ class _DynamicRotatingHotListState extends State<DynamicRotatingHotList> {
       if (name.contains("siamese")) return "assets/images/cats/siamese.jpg";
       if (name.contains("british shorthair")) return "assets/images/cats/british_shorthair.jpg";
       if (name.contains("ragdoll")) return "assets/images/cats/ragdoll.jpg";
-      return "";
+      if (name.contains("budgerigar")) return "assets/images/birds/budgerigar.jpg";
+      if (name.contains("cockatiel")) return "assets/images/birds/cockatiel.jpg";
+      if (name.contains("african grey")) return "assets/images/birds/african_grey.jpg";
+      if (name.contains("conure")) return "assets/images/birds/green_cheeked_conure.jpg";
+      if (name.contains("zebra finch")) return "assets/images/birds/zebra_finch.jpg";
+      return "assets/images/petslider/placeholder.jpg";
     }
 
     if (trendingPets.isEmpty) return const SizedBox(height: 160);
@@ -387,7 +392,7 @@ class _DynamicRotatingHotListState extends State<DynamicRotatingHotList> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(child: Image.asset(getPetImage(pet.name), width: double.infinity, fit: BoxFit.cover, errorBuilder: (_, __, ___) => Container(color: Colors.deepPurple[50], child: const Icon(Icons.pets, color: Colors.deepPurple, size: 28)))),
-                    Padding(padding: const EdgeInsets.all(8.0), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Text(pet.name, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold)), const SizedBox(height: 2), Text("\$${pet.price}", style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800, color: Colors.deepPurple))])),
+                    Padding(padding: const EdgeInsets.all(8.0), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Text(pet.name, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold)), const SizedBox(height: 2), Text("₱${pet.price}", style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800, color: Colors.deepPurple))])),
                   ],
                 ),
               ),
@@ -410,11 +415,11 @@ class _DynamicRotatingPromosListState extends State<DynamicRotatingPromosList> {
 
   final List<Map<String, dynamic>> promoItems = [
     {"title": "20% OFF", "subtitle": "All Bird Supplies", "icon": Icons.flutter_dash_rounded, "gradient": [const Color(0xFFFF9100), const Color(0xFFFF3D00)]},
-    {"title": "\$50 OFF", "subtitle": "Grooming Packages", "icon": Icons.content_cut_rounded, "gradient": [Color(0xFFB388FF), Color(0xFF6200EA)]},
+    {"title": "₱50 OFF", "subtitle": "Grooming Packages", "icon": Icons.content_cut_rounded, "gradient": [Color(0xFFB388FF), Color(0xFF6200EA)]},
     {"title": "FREE TOY", "subtitle": "Spend 100 Treats Pts", "icon": Icons.card_giftcard_rounded, "gradient": [const Color(0xFF26A69A), const Color(0xFF00695C)]},
     {"title": "BOGO DEAL", "subtitle": "Premium Cat Treats", "icon": Icons.pets_rounded, "gradient": [const Color(0xFFEC407A), const Color(0xFFB71C1C)]},
     {"title": "15% SAVINGS", "subtitle": "First Veterinary Check", "icon": Icons.medical_services_rounded, "gradient": [const Color(0xFF42A5F5), const Color(0xFF0D47A1)]},
-    {"title": "\$10 GIFT", "subtitle": "Shampoo Products", "icon": Icons.bubble_chart_rounded, "gradient": [const Color(0xFF66BB6A), const Color(0xFF1B5E20)]},
+    {"title": "₱10 GIFT", "subtitle": "Shampoo Products", "icon": Icons.bubble_chart_rounded, "gradient": [const Color(0xFF66BB6A), const Color(0xFF1B5E20)]},
     {"title": "3x REWARDS", "subtitle": "Spa Day Sessions", "icon": Icons.star_rounded, "gradient": [const Color(0xFFAB47BC), const Color(0xFF4A148C)]},
   ];
 

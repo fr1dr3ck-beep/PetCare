@@ -363,6 +363,42 @@ class PetStoreController extends ChangeNotifier {
         _petStockLevels[row['pet_id']] = row['stock_level'];
       }
 
+      // 🚀 NEW: Sync Products and Services from Supabase
+      try {
+        final productsRes = await _supabase.from('pet_products').select().order('id');
+        if (productsRes.isNotEmpty) {
+          _availablePets.clear();
+          for (var row in productsRes) {
+            _availablePets.add(PetModel(
+              id: row['id'],
+              name: row['name'],
+              price: row['price'],
+              category: row['category'],
+              description: row['description'],
+            ));
+          }
+        }
+
+        final servicesRes = await _supabase.from('pet_services').select().order('id');
+        if (servicesRes.isNotEmpty) {
+          for (var row in servicesRes) {
+            int sid = row['id'];
+            int idx = _services.indexWhere((s) => s.id == sid);
+            if (idx != -1) {
+              _services[idx] = ServiceDetail(
+                id: sid,
+                title: row['title'],
+                price: (row['price'] as num).toDouble(),
+                icon: _services[idx].icon,
+                description: row['description'],
+              );
+            }
+          }
+        }
+      } catch (e) {
+        debugPrint("Catalog sync failed: $e");
+      }
+
       var txnQuery = _supabase.from('pending_transactions').select();
       if (!_isAdmin) {
         txnQuery = txnQuery.eq('user_id', currentSessionId);
@@ -875,6 +911,41 @@ class PetStoreController extends ChangeNotifier {
   void updateHotPetsDisplayCount(int count) { _hotLimitCount = count; notifyListeners(); }
   void updatePromoItem(int index, String title, String subtitle) { if (index >= 0 && index < _promoItems.length) { _promoItems[index]["title"] = title; _promoItems[index]["subtitle"] = subtitle; notifyListeners(); } }
   void updateResourceGridItem(int index, String title) { if (index >= 0 && index < _resourceGridItems.length) { _resourceGridItems[index]["title"] = title; notifyListeners(); } }
-  void adminModifyProductPrice(int productId, String newPrice) { int idx = _availablePets.indexWhere((p) => p.id == productId); if (idx != -1) { _availablePets[idx] = PetModel(id: _availablePets[idx].id, name: _availablePets[idx].name, price: newPrice, category: _availablePets[idx].category, description: _availablePets[idx].description); notifyListeners(); } }
-  void adminModifyServicePrice(int serviceId, double newPrice) { int idx = _services.indexWhere((s) => s.id == serviceId); if (idx != -1) { _services[idx] = ServiceDetail(id: _services[idx].id, title: _services[idx].title, price: newPrice, icon: _services[idx].icon, description: _services[idx].description); notifyListeners(); } }
+  Future<void> adminModifyProductPrice(int productId, String newPrice) async {
+    int idx = _availablePets.indexWhere((p) => p.id == productId);
+    if (idx != -1) {
+      _availablePets[idx] = PetModel(
+        id: _availablePets[idx].id,
+        name: _availablePets[idx].name,
+        price: newPrice,
+        category: _availablePets[idx].category,
+        description: _availablePets[idx].description,
+      );
+      notifyListeners();
+      try {
+        await _supabase.from('pet_products').update({'price': newPrice}).eq('id', productId);
+      } catch (e) {
+        debugPrint("Failed to persist product price change: $e");
+      }
+    }
+  }
+
+  Future<void> adminModifyServicePrice(int serviceId, double newPrice) async {
+    int idx = _services.indexWhere((s) => s.id == serviceId);
+    if (idx != -1) {
+      _services[idx] = ServiceDetail(
+        id: _services[idx].id,
+        title: _services[idx].title,
+        price: newPrice,
+        icon: _services[idx].icon,
+        description: _services[idx].description,
+      );
+      notifyListeners();
+      try {
+        await _supabase.from('pet_services').update({'price': newPrice}).eq('id', serviceId);
+      } catch (e) {
+        debugPrint("Failed to persist service price change: $e");
+      }
+    }
+  }
 }
