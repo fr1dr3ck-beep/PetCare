@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:trial_project/pet/pet_product_model.dart';
 import 'package:trial_project/pages/cart/cart_model.dart';
+import 'package:trial_project/secrets.dart';
 
 // 🚀 NEW IMPORTS REQUIRED FOR PAYMONGO API INTERACTIONS
 import 'dart:convert';
@@ -509,7 +510,7 @@ class PetStoreController extends ChangeNotifier {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
           // 🔒 Basic Base64 token compilation utilizing your verified developers credential key
-          'Authorization': 'Basic ${base64Encode(utf8.encode('sk_live_fYnu8cUKRzXrt3pDtUWtkaUe:'))}',
+          'Authorization': 'Basic ${base64Encode(utf8.encode(AppSecrets.payconfigKey))}',
         },
         body: jsonEncode(checkoutPayload),
       );
