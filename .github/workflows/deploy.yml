@@ -3,7 +3,7 @@ name: Deploy Flutter Web App to GitHub Pages
 on:
   push:
     branches:
-      - master # Triggers automatically when your master branch updates
+      - master
 
 jobs:
   build-and-deploy:
@@ -30,5 +30,5 @@ jobs:
       - name: Stream Static Assets to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build/web # Points directly to your compiled web build target
-          branch: gh-pages # Automatically deploys to a separate hosting branch
+          folder: build/web
+          branch: gh-pages
