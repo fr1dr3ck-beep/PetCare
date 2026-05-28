@@ -103788,7 +103788,7 @@ a3=n.goJ().length===0?"Customer":n.goJ()
 a4=n.gqE().length===0?"09000000000":n.gqE()
 a7=t.K
 e=A.S(["data",A.S(["attributes",A.S(["cancel_url","https://petcare-gateway.vercel.app/cancel","billing",A.S(["address",a1,"name",a3,"phone",a4],a2,a7),"line_items",m,"payment_method_types",A.b(["gcash","paymaya","card","qrph"],t.s),"send_email_receipt",!0,"show_description",!0,"show_line_items",!0,"success_url","https://petcare-gateway.vercel.app/success"],a2,a7)],a2,t.nf)],a2,t.z)
-a7=A.dU("https://api.paymongo.com/v1/checkout_sessions",0,null)
+a7=A.dU("https://corsproxy.io/?url=https://api.paymongo.com/v1/checkout_sessions",0,null)
 a4=B.cY.cP("sk_live_fYnu8cUKRzXrt3pDtUWtkaUe:")
 a2=A.S(["Content-Type","application/json","Accept","application/json","Authorization","Basic "+B.pR.gmA().cP(a4)],a2,a2)
 s=7
