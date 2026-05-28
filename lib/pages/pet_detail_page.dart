@@ -81,11 +81,7 @@ class _PetDetailPageState extends State<PetDetailPage> {
                         child: const Icon(Icons.arrow_back_ios_new_rounded, size: 18, color: Colors.black87),
                       ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(color: Colors.white.withOpacity(0.8), shape: BoxShape.circle),
-                      child: const Icon(Icons.shopping_cart_outlined, size: 18, color: Colors.black87),
-                    ),
+
                   ],
                 ),
               ),

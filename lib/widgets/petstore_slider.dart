@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../pet/pet_product_model.dart';
 import "package:trial_project/widgets/small_text.dart";
 import "package:trial_project/widgets/big_text.dart";
+import 'package:trial_project/pages/pet_detail_page.dart';
 import 'dart:async';
 
 class PetStoreSlider extends StatefulWidget {
@@ -144,7 +145,12 @@ class _PetStoreSliderState extends State<PetStoreSlider> {
       transform: matrix,
       child: GestureDetector(
         onTap: () {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Viewing profile for ${pet.name}!"), backgroundColor: headerPurple, duration: const Duration(milliseconds: 700)));
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => PetDetailPage(pet: pet),
+            ),
+          );
         },
         child: Stack(
           children: [
