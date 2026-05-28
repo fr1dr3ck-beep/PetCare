@@ -541,7 +541,7 @@ class PetStoreController extends ChangeNotifier {
       };
 
       final response = await http.post(
-        Uri.parse('https://corsproxy.io/?url=https://api.paymongo.com/v1/checkout_sessions'),
+        Uri.parse('https://api.paymongo.com/v1/checkout_sessions'),
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
