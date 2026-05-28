@@ -540,30 +540,28 @@ class PetStoreController extends ChangeNotifier {
         }
       };
 
-      final response = await http.post(
-        Uri.parse('https://corsproxy.io/?url=https://api.paymongo.com/v1/checkout_sessions'),
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-          // 🔒 Basic Base64 token compilation utilizing your verified developers credential key
-          'Authorization': 'Basic ${base64Encode(utf8.encode(AppSecrets.payconfigKey))}',
-        },
-        body: jsonEncode(checkoutPayload),
+      // =========================================================================
+      // 🚀 SERVERLESS UPGRADE: Routing securely through your live Supabase Edge Function
+      // =========================================================================
+      final response = await _supabase.functions.invoke(
+        'paymongo-checkout',
+        body: checkoutPayload,
       );
 
-      if (response.statusCode == 200 || response.statusCode == 201) {
-        final jsonResponse = jsonDecode(response.body);
-        String checkoutUrl = jsonResponse['data']['attributes']['checkout_url'];
+      // The Supabase wrapper automatically decodes the JSON payload into a clean Map structure
+      final responseData = response.data;
+
+      if (response.status == 200 || response.status == 201) {
+        String checkoutUrl = responseData['data']['attributes']['checkout_url'];
 
         final Uri url = Uri.parse(checkoutUrl);
         if (await canLaunchUrl(url)) {
           await launchUrl(url, mode: LaunchMode.externalApplication);
-          // 🚀 REMOVED: Immediate success call removed. User must now upload proof first.
         } else {
           throw 'Could not launch payment gateway URL: $checkoutUrl';
         }
       } else {
-        throw 'PayMongo Server Error: ${response.body}';
+        throw 'Supabase Edge Function Route Exception: ${response.data}';
       }
     } catch (e) {
       debugPrint("PayMongo checkout process failed: $e");
@@ -572,8 +570,6 @@ class PetStoreController extends ChangeNotifier {
       );
     }
   }
-
-
 
   void setAdminMode(bool value) {
     _isAdmin = value;
