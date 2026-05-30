@@ -481,6 +481,10 @@ class PetStoreController extends ChangeNotifier {
   Future<void> initiatePayMongoCheckout(BuildContext context, {required bool isStore, List<int>? selectedIds}) async {
     try {
       List<Map<String, dynamic>> lineItems = [];
+      List<CartModel> storeSnapshot = [];
+      List<BookedService> serviceSnapshot = [];
+      List<String> itemNames = [];
+      double calculatedTotal = 0.0;
 
       if (isStore) {
         if (selectedIds == null || selectedIds.isEmpty) return;
@@ -489,6 +493,10 @@ class PetStoreController extends ChangeNotifier {
           if (item != null) {
             double itemPrice = double.tryParse(item.price) ?? 0.0;
             int priceInCentavos = (itemPrice * 100).toInt();
+
+            calculatedTotal += (itemPrice * item.quantity);
+            storeSnapshot.add(item);
+            itemNames.add("${item.quantity}x ${item.name}");
 
             lineItems.add({
               'amount': priceInCentavos,
@@ -505,6 +513,11 @@ class PetStoreController extends ChangeNotifier {
           final service = _bookedServices[id];
           if (service != null) {
             int priceInCentavos = (service.totalPrice * 100).toInt();
+
+            calculatedTotal += service.totalPrice;
+            serviceSnapshot.add(service);
+            itemNames.add(service.serviceTitle);
+
             lineItems.add({
               'amount': priceInCentavos,
               'currency': 'PHP',
@@ -518,10 +531,37 @@ class PetStoreController extends ChangeNotifier {
 
       if (lineItems.isEmpty) return;
 
+      // 🆔 AUTOMATION KEY: Create a unique transaction ID before loading the gateway
+      String generatedTxnId = "${isStore ? 'ST' : 'SR'}-${DateTime.now().millisecondsSinceEpoch.toString().substring(8)}";
+
+      // 📝 AUTOMATION STEP: Log the transaction into Supabase immediately as 'Pending'
+      await _supabase.from('pending_transactions').insert({
+        'id': generatedTxnId,
+        'type': isStore ? "Store" : "Services",
+        'description': itemNames.join(", "),
+        'total_price': calculatedTotal,
+        'status': "Pending",
+        'user_name': userName,
+        'user_phone': userPhone,
+        'user_address': userAddress,
+        'user_id': _userId,
+        'proof_of_payment': "Awaiting Webhook Web Pay",
+        'store_items_json': isStore ? storeSnapshot.map((x) => {'id': x.id, 'name': x.name, 'price': x.price, 'category': x.category, 'quantity': x.quantity}).toList() : [],
+        'service_items_json': isStore ? [] : serviceSnapshot.map((x) => x.toJson()).toList()
+      });
+
+      // Clear local UI application cart lists since ledger records are stored securely
+      if (isStore) {
+        for (var id in selectedIds) { _globalCart.remove(id); }
+      } else {
+        for (var id in selectedIds) { _bookedServices.remove(id); }
+      }
+      notifyListeners();
+
       final Map<String, dynamic> checkoutPayload = {
         'data': {
           'attributes': {
-            'cancel_url': 'https://petcare-gateway.vercel.app/cancel',
+            'cancel_url': 'https://fr1dr3ck-beep.github.io/PetCare/',
             'billing': {
               'address': {
                 'line1': userAddress.isEmpty ? "N/A" : userAddress,
@@ -535,20 +575,20 @@ class PetStoreController extends ChangeNotifier {
             'send_email_receipt': true,
             'show_description': true,
             'show_line_items': true,
-            'success_url': 'https://petcare-gateway.vercel.app/success',
+            'success_url': 'https://fr1dr3ck-beep.github.io/PetCare/',
+            // 🏷️ METADATA PASSTHROUGH: Sends the local Txn ID over to PayMongo tracking variables
+            'metadata': {
+              'transaction_id': generatedTxnId,
+            }
           }
         }
       };
 
-      // =========================================================================
-      // 🚀 SERVERLESS UPGRADE: Routing securely through your live Supabase Edge Function
-      // =========================================================================
       final response = await _supabase.functions.invoke(
         'paymongo-checkout',
         body: checkoutPayload,
       );
 
-      // The Supabase wrapper automatically decodes the JSON payload into a clean Map structure
       final responseData = response.data;
 
       if (response.status == 200 || response.status == 201) {
